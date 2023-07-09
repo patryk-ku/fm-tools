@@ -251,7 +251,7 @@ const checkFriend = {
             //     yourPosition: sharedArtists[biggestPositionThisLoop].yourPosition,
             //     friendPosition: sharedArtists[biggestPositionThisLoop].friendPosition
             // });
-            orderedSortedArtists.push({...sharedArtists[biggestPositionThisLoop]});
+            orderedSortedArtists.push({ ...sharedArtists[biggestPositionThisLoop] });
             sharedArtists[biggestPositionThisLoop].artist = 'done';
         }
 
@@ -324,11 +324,17 @@ const checkFriend = {
             this.outputArtists.append(div);
             artistCounter++;
         });
-        
+
         this.loadingOverlay.style.display = 'none';
+        this.isRequestPending = false;
+
+        if (artistCounter == 0) {
+            this.displayError('Users do not have any shared artists in their top 1000 (minimum 10 scrobbles)');
+            return;
+        }
+
         this.output.style.display = 'block';
         this.buttons.download.style.visibility = 'visible';
-        this.isRequestPending = false;
 
         // ----- end of new functions
     },
