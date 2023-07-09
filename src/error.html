@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 not found</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geologica&display=swap');
+
+        body {
+            background-color: #1e1e1e;
+            color: white;
+            font-family: 'Geologica', sans-serif;
+            margin: 0;
+        }
+
+        #container {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        header {
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-color: black;
+            user-select: none;
+        }
+
+        .header-huge-text {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .header-text-red {
+            color: #dc0715;
+        }
+
+        main {
+            text-align: center;
+            background-color: #1e1e1e;
+            padding-top: 4em;
+            padding-left: 2.5%;
+            padding-right: 2.5%;
+            flex: 1;
+        }
+
+        .error-huge-text {
+            font-size: 100px;
+            font-weight: bold;
+        }
+
+        main a {
+            color: white;
+            display: block;
+            margin-top: 2em;
+            font-size: 2em;
+        }
+
+        footer {
+            padding: 0.5em;
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            color: rgb(179, 179, 179);
+        }
+
+        footer a {
+            text-decoration: none;
+            color: rgb(179, 179, 179);
+        }
+
+        footer>span {
+            margin-left: auto;
+        }
+
+        #github-logo img {
+            width: 1.4em;
+            height: 1.4em;
+            margin-top: -0.1em;
+            margin-bottom: -0.3em;
+        }
+
+        @media screen and (min-width: 840px) {
+            .header-huge-text {
+                font-size: 80px;
+            }
+
+            .error-huge-text {
+                font-size: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div>
+                <span class="header-small-text">My collection of</span>
+                <br><span class="header-huge-text"> <span class="header-text-red">.fm </span>TOOLS</span><br>
+                <span class="header-small-text"> for playing with last<span class="header-text-red">.fm
+                    </span>data</span>
+            </div>
+        </header>
+        <main>
+            <span class="error-huge-text">404</span><br>
+            page not found
+            <a href="/"> &lArr; back</a>
+        </main>
+        <footer>
+            <a href="#">about</a>
+            <a href="#">contact</a>
+            <span>Patryk Kurdziel, 2023</span>
+            <div id="github-logo">
+                <a href="https://github.com/patryk-ku"><img src="./img/github-mark-white.svg" alt="GitHub" /></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wall</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="styles/wall.css">
+    <script src="./scripts/wall.js" type="module" defer></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="menu">
+                <div class="fm-tools-logo"><a href="/">
+                    <span class="red">.fm </span>TOOLS</a>
+                </div>
+                <div class="nickname-container">
+                    <input onClick="this.select();" type="text" id="nickname" placeholder="last.fm nickname"
+                        title="Nickname" autofocus>
+                </div>
+                <div id="create-button" class="icon-container" title="Generate">
+                    <div class="icon-start"></div>
+                </div>
+                <div id="download-button" class="icon-container" title="Download">
+                    <div class="icon-download"></div>
+                </div>
+                <div id="color-button" class="icon-container" title="Random color">
+                    <div class="icon-color"></div>
+                </div>
+                <div id="settings-popup-closer"></div>
+                <div id="settings-button" class="icon-container">
+                    <div id="settings-container">
+                        <!-- <div id="settings-container-title">Settings</div> -->
+                        <div class="settings-container-section">
+                            <div class="settings-container-header">shape</div>
+                            <div class="settings-container-content">
+                                <div id="settings-square-proportions" class="icon-square" title="Square"></div>
+                                <div id="settings-rectangle-proportions" class="icon-rectangle" title="Wide"></div>
+                                <div id="settings-rectangle2-proportions" class="icon-rectangle2" title="Thin"></div>
+                            </div>
+                        </div>
+                        <!-- <div class="settings-container-section disabled">
+                            <div class="settings-container-header">font size</div>
+                            <div class="settings-container-content">
+                                <div class="icon-text-small"></div>
+                                <div class="icon-text-medium active"></div>
+                                <div class="icon-text-big"></div>
+                            </div>
+                        </div> -->
+                        <div class="settings-container-section">
+                            <div class="settings-container-header">text align</div>
+                            <div class="settings-container-content">
+                                <div id="settings-align-text-left" class="settings-icon-background active" title="Left">
+                                    <div class="icon-align-left"></div>
+                                </div>
+                                <div id="settings-align-text-center" class="settings-icon-background" title="Center">
+                                    <div class="icon-align-center"></div>
+                                </div>
+                                <div id="settings-align-text-justify" class="settings-icon-background" title="Justify">
+                                    <div class="icon-align-justify"></div>
+                                </div>
+                                <div id="settings-align-text-right" class="settings-icon-background" title="Right">
+                                    <div class="icon-align-right"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings-container-section">
+                            <div class="settings-container-header">divider</div>
+                            <div class="settings-container-content">
+                                <div id="settings-divider-none" class="settings-icon-background" title="None">
+                                    <div class="icon-space"></div>
+                                </div>
+                                <div id="settings-divider-comma" class="settings-icon-background" title="Comma">
+                                    <div class="icon-comma"></div>
+                                </div>
+                                <div id="settings-divider-color" class="settings-icon-background" title="Color">
+                                    <div class="icon-color2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings-container-section">
+                            <div class="settings-container-header">theme</div>
+                            <div id="settings-theme-list" class="settings-container-content">
+                            </div>
+                        </div>
+                        <div class="settings-container-section">
+                            <div class="settings-container-header">custom theme</div>
+                            <div class="settings-container-content">
+                                <label for="settings-custom-text" class="settings-custom-color"
+                                    title="Custom text color">
+                                    <span>text</span>
+                                    <input type="color" name="settings-custom-text" id="settings-custom-text">
+                                </label>
+                                <label for="settings-custom-background" class="settings-custom-color"
+                                    title="Custom background color">
+                                    <span>background</span>
+                                    <input type="color" name="settings-custom-background"
+                                        id="settings-custom-background">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="settings-icon" class="icon-settings" title="Settings"></div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="output">
+                <div id="artists"></div>
+                <div id="info">
+                    <div>Top 50 Artists / <span id="output-nickname"></span></div>
+                    <div>(All Time)</div>
+                </div>
+            </div>
+            <div id="output-loading-overlay">
+                <div class="icon-loading"></div>
+            </div>
+            <div id="output-error-overlay">
+                <span id="output-error-overlay-text">Error</span>
+            </div>
+            <!-- <div id="icon-testing">
+                <div class="icon-friend-check"></div>
+            </div> -->
+        </main>
+    </div>
+</body>
+
+</html>

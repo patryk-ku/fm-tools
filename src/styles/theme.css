@@ -1,0 +1,9 @@
+:root {
+    --color-background: black;
+    --color-background2: #1e1e1e;
+    /* --color-background2: #111 */
+    --color-font: white;
+    --color-font2: rgb(179, 179, 179);
+    --color-fm-red: #dc0715;
+    --color-secondary: white;
+}

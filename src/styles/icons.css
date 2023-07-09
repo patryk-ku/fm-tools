@@ -1,0 +1,966 @@
+/* :root {
+    --icons-mobile-breakpoint: 840px;
+} */
+
+/* Index html icons */
+
+/* the wall icon */
+.icon-thewall,
+.icon-thewall::after,
+.icon-thewall::before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+}
+
+.icon-thewall {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    border: 0.05em solid var(--icon-color);
+}
+
+.icon-thewall::after {
+    position: absolute;
+    height: 0.05em;
+    width: 0.7em;
+    top: 0.1em;
+    left: 0.1em;
+    background-color: var(--icon-color);
+    box-shadow: 0em 0.1em 0 0 var(--icon-color),
+        0em 0.1em 0 0 var(--icon-color),
+        0em 0.2em 0 0 var(--icon-color),
+        0em 0.3em 0 0 var(--icon-color),
+        0em 0.4em 0 0 var(--icon-color);
+}
+
+.icon-thewall::before {
+    position: absolute;
+    content: '';
+    height: 0.05em;
+    width: 0.25em;
+    top: 0.65em;
+    left: 0.1em;
+    background-color: var(--icon-color);
+    box-shadow: 0em 0.1em 0 0 var(--icon-color);
+}
+
+/* heatmap icon */
+.icon-heatmap,
+.icon-heatmap::after {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+}
+
+.icon-heatmap {
+    position: relative;
+    height: 1em;
+    width: 1em;
+    background-color: transparent;
+}
+
+.icon-heatmap::after {
+    position: absolute;
+    height: 0.2em;
+    width: 0.2em;
+    border-radius: 0.07em;
+    background-color: var(--icon-color);
+    box-shadow: 0.266em 0 0 0 var(--icon-color),
+        0.532em 0 0 0 var(--icon-color),
+        0.798em 0 0 0 var(--icon-color),
+
+        0 0.266em 0 0 var(--icon-color),
+        0.266em 0.266em 0 0 var(--icon-color),
+        0.532em 0.266em 0 0 var(--icon-color),
+        0.798em 0.266em 0 0 var(--icon-color),
+
+        0 0.532em 0 0 var(--icon-color),
+        0.266em 0.532em 0 0 var(--icon-color),
+        0.532em 0.532em 0 0 var(--icon-color),
+        0.798em 0.532em 0 0 var(--icon-color),
+
+        0 0.798em 0 0 var(--icon-color),
+        0.266em 0.798em 0 0 var(--icon-color),
+        0.532em 0.798em 0 0 var(--icon-color),
+        0.798em 0.798em 0 0 var(--icon-color);
+}
+
+/* bubbles icon */
+.icon-bubbles,
+.icon-bubbles::after {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+}
+
+.icon-bubbles {
+    position: relative;
+    height: 1em;
+    width: 1em;
+    background-color: transparent;
+}
+
+.icon-bubbles::after {
+    position: absolute;
+    width: 0.5em;
+    height: 0.5em;
+    bottom: 0;
+    border-radius: 50%;
+    background-color: var(--icon-color);
+    box-shadow: 0.1em -0.6em 0 -0.1em var(--icon-color),
+        0.4em -0.3em 0 -0.05em var(--icon-color),
+        0.65em -0.05em 0 -0.16em var(--icon-color),
+        0.45em 0.07em 0 -0.16em var(--icon-color),
+        0.6em -0.55em 0 -0.16em var(--icon-color);
+}
+
+/* collage icon */
+.icon-collage,
+.icon-collage:after,
+.icon-collage:before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+}
+
+.icon-collage {
+    position: relative;
+    height: 1em;
+    width: 1em;
+    background-color: transparent;
+    border: 0.05em solid var(--icon-color);
+}
+
+.icon-collage::after {
+    position: absolute;
+    width: 0.38em;
+    height: 1em;
+    top: -0.05em;
+    left: 0.265em;
+    border: 0.05em solid var(--icon-color);
+    background-color: transparent;
+}
+
+.icon-collage::before {
+    position: absolute;
+    height: 0.38em;
+    width: 1em;
+    left: -0.05em;
+    top: 0.26em;
+    border: 0.05em solid var(--icon-color);
+    background-color: transparent;
+}
+
+/* Check friend icon */
+.icon-friend-check,
+.icon-friend-check::after,
+.icon-friend-check::before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+}
+
+.icon-friend-check {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.icon-friend-check::after {
+    position: absolute;
+    width: 0.7em;
+    height: 0.1em;
+    left: -0.1em;
+    top: 0.075em;
+    background-color: var(--icon-color);
+    border-radius: 0.03em;
+    box-shadow: -0.4em 0.2em 0 0 var(--icon-color),
+        -0.2em 0.4em 0 0 var(--icon-color),
+        -0.1em 0.6em 0 0 var(--icon-color),
+        -0.3em 0.8em 0 0 var(--icon-color);
+}
+
+.icon-friend-check::before {
+    position: absolute;
+    width: 0.75em;
+    height: 0.1em;
+    right: -0.1em;
+    top: 0.275em;
+    background-color: var(--icon-color);
+    border-radius: 0.03em;
+    box-shadow: 0.4em -0.2em 0 0 var(--icon-color),
+        0.2em 0.2em 0 0 var(--icon-color),
+        0.3em 0.4em 0 0 var(--icon-color),
+        0.1em 0.6em 0 0 var(--icon-color);
+}
+
+/* Start / Create / Generate icon */
+
+.icon-start,
+.icon-start:after,
+.icon-start:before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.icon-start {
+    position: relative;
+    font-size: inherit;
+    height: 1em;
+    width: 1em;
+    background-color: var(--icon-bg-color);
+}
+
+.icon-start:before {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 0.5em solid transparent;
+    border-left: 0.9em solid var(--icon-color);
+    border-bottom: 0.5em solid transparent;
+    top: 0.025em;
+    left: 0.05em;
+    transform: rotate(0);
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .icon-start:hover:before {
+        transform: rotate(-0.05turn);
+        transform: scale(0.85);
+        transition: transform 0.3s;
+    }
+}
+
+/* Download icon */
+
+.icon-download,
+.icon-download:after,
+.icon-download:before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.icon-download {
+    position: relative;
+    font-size: inherit;
+    height: 1em;
+    width: 1em;
+    background-color: var(--icon-bg-color);
+    border-bottom: 0.1em;
+    border-bottom-style: solid;
+    border-color: var(--icon-color);
+}
+
+.icon-download:before {
+    position: absolute;
+    background-color: var(--icon-color);
+    width: 0.3em;
+    height: 0.4em;
+    left: 0.35em;
+    top: 0em;
+    transition: top 0.3s;
+}
+
+.icon-download:after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 0.3em solid var(--icon-color);
+    border-left: 0.3em solid transparent;
+    border-right: 0.3em solid transparent;
+    left: 0.2em;
+    top: 0.4em;
+    transition: top 0.3s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .icon-download:hover:before {
+        top: 0.2em;
+        transition: top 0.3s;
+    }
+
+    .icon-download:hover:after {
+        top: 0.6em;
+        transition: top 0.3s;
+    }
+}
+
+.icon-download.active::before,
+.icon-download.active::after {
+    animation-iteration-count: 1;
+    animation-duration: 1.5s;
+    animation-name: slideDownload;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* animation-timing-function: linear; */
+}
+
+@keyframes slideDownload {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(1.5em);
+        opacity: 0;
+    }
+}
+
+/* .icon-download:hover .icon-download2 {
+} */
+
+/* Settings icon */
+
+.icon-settings,
+.icon-settings:after,
+.icon-settings:before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.icon-settings {
+    position: relative;
+    font-size: inherit;
+    width: 1em;
+    height: 1em;
+    /* background-color: var(--icon-bg-color); */
+    background-color: inherit;
+    border-top: 0.15em;
+    border-top-style: solid;
+    border-top-color: var(--icon-color);
+    /* transition: border-top-color 0.3s; */
+}
+
+.icon-settings:before {
+    position: absolute;
+    width: 1em;
+    height: 0.15em;
+    top: 0.275em;
+    background-color: var(--icon-color);
+    transform: translateX(0);
+    transform: rotate(0);
+    transition: transform 0.3s;
+}
+
+.icon-settings:after {
+    position: absolute;
+    width: 1em;
+    height: 0.15em;
+    top: 0.70em;
+    background-color: var(--icon-color);
+    transform: translateX(0);
+    transform: rotate(0);
+    transition: transform 0.3s, top 0.3s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .icon-settings:hover:before {
+        transform: translateX(-15%);
+        transition: transform 0.3s;
+    }
+
+    .icon-settings:hover:after {
+        transform: translateX(10%);
+        transition: transform 0.3s;
+    }
+}
+
+.icon-settings.active {
+    border-top-color: transparent;
+    /* transition: border-top-color 0.4s; */
+}
+
+.icon-settings.active::before {
+    transform: rotate(45deg);
+    transition: transform 0.4s;
+}
+
+.icon-settings.active::after {
+    transform: rotate(-45deg);
+    top: 0.275em;
+    transition: transform 0.3s, top 0.4s;
+}
+
+/* Color switch / theme switch icon*/
+
+.icon-color,
+.icon-color:after,
+.icon-color:before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.icon-color {
+    position: relative;
+    font-size: inherit;
+    width: 1em;
+    height: 1em;
+    background-color: var(--icon-bg-color);
+    transform: rotate(0);
+}
+
+.icon-color::before {
+    position: absolute;
+    width: 0.75em;
+    height: 0.75em;
+    top: 0.20em;
+    left: 0.125em;
+    border-radius: 0 50% 50% 50%;
+    border: 0.1em solid var(--icon-color);
+    background-color: var(--icon-color);
+    transform: rotate(45deg);
+    clip-path: polygon(100% 20%, 100% 0, 100% 50%, 100% 100%, 0 100%, 20% 100%);
+    transition: clip-path 0.3s;
+}
+
+.icon-color::after {
+    position: absolute;
+    width: 0.85em;
+    height: 0.85em;
+    top: 0.15em;
+    left: 0.075em;
+    border-radius: 0 50% 50% 50%;
+    border: 0.1em solid var(--icon-color);
+    transform: rotate(45deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .icon-color:hover::before {
+        clip-path: polygon(45% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 45%);
+        transition: clip-path 0.3s;
+    }
+}
+
+.icon-color.active {
+    /* transform: rotate(1turn);
+    transition: transform 0.5s; */
+    animation-duration: 0.5s;
+    animation-name: rotateIcon;
+}
+
+/* Proportion icons */
+
+.icon-square {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    width: 1em;
+    height: 1em;
+}
+
+.icon-square:after {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    border: 0.1em solid var(--icon-color);
+}
+
+.icon-rectangle {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    width: 1em;
+    height: 1em;
+}
+
+.icon-rectangle:after {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    width: 1em;
+    top: 0.25em;
+    height: 0.5em;
+    border: 0.1em solid var(--icon-color);
+}
+
+.icon-rectangle2 {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    width: 1em;
+    height: 1em;
+}
+
+.icon-rectangle2::after {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    width: 0.5em;
+    left: 0.25em;
+    height: 1em;
+    border: 0.1em solid var(--icon-color);
+}
+
+.icon-square.active:after,
+.icon-rectangle.active:after,
+.icon-rectangle2.active:after {
+    --icon-color: var(--color-secondary);
+}
+
+.icon-square.active:before,
+.icon-rectangle.active:before,
+.icon-rectangle2.active:before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    top: -0.2em;
+    left: -0.2em;
+    width: 1.4em;
+    height: 1.4em;
+    border-radius: 0.25em;
+    background-color: var(--icon-bg-color);
+}
+
+/* Text size icons */
+
+.icon-text-small {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    width: 1em;
+    height: 1em;
+}
+
+.icon-text-small:after {
+    display: block;
+    content: 'T';
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    /* width: 100%;
+    height: 100%; */
+    font-size: 0.5em;
+    color: var(--icon-color);
+    bottom: -0.25em;
+    left: 0.75em;
+}
+
+.icon-text-medium {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    width: 1em;
+    height: 1em;
+}
+
+.icon-text-medium:after {
+    display: block;
+    content: 'T';
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    /* width: 1em;
+    height: 1em; */
+    font-size: 0.8em;
+    color: var(--icon-color);
+    bottom: -0.26em;
+    left: 0.35em;
+}
+
+.icon-text-big {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    width: 1em;
+    height: 1em;
+}
+
+.icon-text-big::after {
+    display: block;
+    content: 'T';
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    color: var(--icon-color);
+}
+
+.icon-text-small.active:after,
+.icon-text-medium.active:after,
+.icon-text-big.active:after {
+    --icon-color: var(--color-secondary);
+}
+
+.icon-text-small.active:before,
+.icon-text-medium.active:before,
+.icon-text-big.active:before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    top: -0.2em;
+    left: -0.2em;
+    width: 1.4em;
+    height: 1.4em;
+    border-radius: 0.25em;
+    background-color: var(--icon-bg-color);
+}
+
+/* Adjust text left icon */
+
+.icon-align-left,
+.icon-align-left:after,
+.icon-align-left:before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.icon-align-left {
+    position: relative;
+    font-size: inherit;
+    width: 1em;
+    height: 1em;
+    border-left: 0.1em solid var(--icon-color);
+}
+
+.icon-align-left::before {
+    position: absolute;
+    width: 0.7em;
+    height: 0.2em;
+    background-color: var(--icon-color);
+    left: 0.1em;
+    top: 0.2em;
+}
+
+.icon-align-left::after {
+    position: absolute;
+    width: 0.45em;
+    height: 0.2em;
+    background-color: var(--icon-color);
+    left: 0.1em;
+    top: 0.6em;
+}
+
+/* Adjust text right icon */
+
+.icon-align-right,
+.icon-align-right:after,
+.icon-align-right:before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.icon-align-right {
+    position: relative;
+    font-size: inherit;
+    width: 1em;
+    height: 1em;
+    border-right: 0.1em solid var(--icon-color);
+}
+
+.icon-align-right::before {
+    position: absolute;
+    width: 0.7em;
+    height: 0.2em;
+    background-color: var(--icon-color);
+    right: 0.1em;
+    top: 0.2em;
+}
+
+.icon-align-right::after {
+    position: absolute;
+    width: 0.45em;
+    height: 0.2em;
+    background-color: var(--icon-color);
+    right: 0.1em;
+    top: 0.6em;
+}
+
+/* Adjust text center icon */
+
+.icon-align-center,
+.icon-align-center:after,
+.icon-align-center:before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.icon-align-center {
+    position: relative;
+    font-size: inherit;
+    width: 1em;
+    height: 1em;
+    border-right: 0.1em solid var(--icon-color);
+    border-left: 0.1em solid var(--icon-color)
+}
+
+.icon-align-center::before {
+    position: absolute;
+    width: 0.6em;
+    height: 0.2em;
+    background-color: var(--icon-color);
+    left: 0.1em;
+    top: 0.2em;
+}
+
+.icon-align-center::after {
+    position: absolute;
+    width: 0.3em;
+    height: 0.2em;
+    background-color: var(--icon-color);
+    left: 0.25em;
+    top: 0.6em;
+}
+
+/* Adjust text justify icon */
+
+.icon-align-justify,
+.icon-align-justify:after,
+.icon-align-justify:before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.icon-align-justify {
+    position: relative;
+    font-size: inherit;
+    width: 1em;
+    height: 1em;
+    border-right: 0.1em solid var(--icon-color);
+    border-left: 0.1em solid var(--icon-color)
+}
+
+.icon-align-justify::before {
+    position: absolute;
+    width: 0.6em;
+    height: 0.2em;
+    background-color: var(--icon-color);
+    left: 0.1em;
+    top: 0.2em;
+}
+
+.icon-align-justify::after {
+    position: absolute;
+    width: 0.6em;
+    height: 0.2em;
+    background-color: var(--icon-color);
+    left: 0.1em;
+    top: 0.6em;
+}
+
+/* Icon font empty space divider */
+
+.icon-space,
+.icon-space:after,
+.icon-space:before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.icon-space {
+    position: relative;
+    font-size: inherit;
+    width: 1em;
+    height: 1em;
+    border-bottom: 0.1em solid var(--icon-color);
+}
+
+.icon-space::before {
+    position: absolute;
+    height: 0.2em;
+    width: 0.1em;
+    left: 0;
+    bottom: 0;
+    background-color: var(--icon-color);
+}
+
+.icon-space::after {
+    position: absolute;
+    height: 0.2em;
+    width: 0.1em;
+    right: 0;
+    bottom: 0;
+    background-color: var(--icon-color);
+}
+
+/* Icon for comma divider */
+
+.icon-comma,
+.icon-comma:after,
+.icon-comma:before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.icon-comma {
+    position: relative;
+    font-size: inherit;
+    width: 1em;
+    height: 1em;
+}
+
+.icon-comma::before {
+    position: absolute;
+    height: 0.35em;
+    width: 0.35em;
+    border-radius: 50%;
+    left: 0.3em;
+    bottom: 0.4em;
+    background-color: var(--icon-color);
+}
+
+.icon-comma::after {
+    position: absolute;
+    height: 0.6em;
+    width: 0.5em;
+    right: 0.32em;
+    bottom: 0.15em;
+    border-right: 0.12em solid var(--icon-color);
+    border-radius: 50%;
+    transform: rotate(16deg);
+    /* background-color: var(--icon-color); */
+}
+
+/* Icon for color divider (the same as for color but without hover */
+
+.icon-color2,
+.icon-color2:after,
+.icon-color2:before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.icon-color2 {
+    position: relative;
+    font-size: inherit;
+    width: 1em;
+    height: 1em;
+}
+
+.icon-color2::before {
+    position: absolute;
+    width: 0.75em;
+    height: 0.75em;
+    top: 0.20em;
+    left: 0.125em;
+    border-radius: 0 50% 50% 50%;
+    border: 0.1em solid var(--icon-color);
+    background-color: var(--icon-color);
+    transform: rotate(45deg);
+    clip-path: polygon(100% 20%, 100% 0, 100% 50%, 100% 100%, 0 100%, 20% 100%);
+}
+
+.icon-color2::after {
+    position: absolute;
+    width: 0.85em;
+    height: 0.85em;
+    top: 0.15em;
+    left: 0.075em;
+    border-radius: 0 50% 50% 50%;
+    border: 0.1em solid var(--icon-color);
+    transform: rotate(45deg);
+}
+
+/* Loading animated icon */
+
+.icon-loading,
+.icon-loading:after,
+.icon-loading:before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+}
+
+.icon-loading {
+    position: relative;
+    font-size: inherit;
+    width: 1em;
+    height: 1em;
+    animation-iteration-count: infinite;
+    animation-duration: 1.3s;
+    animation-name: rotateIcon;
+    animation-timing-function: linear;
+}
+
+.icon-loading::before {
+    position: absolute;
+    width: 0.8em;
+    height: 0.8em;
+    top: 0.1em;
+    left: 0.1em;
+    border-top: 0.1em solid var(--icon-color);
+    border-left: 0.1em solid var(--icon-color);
+    border-right: 0.1em solid var(--icon-color);
+    border-bottom: 0.1em solid transparent;
+    border-radius: 50%;
+}
+
+.icon-loading::after {
+    position: absolute;
+    /* border-top: 0.1em solid var(--icon-color); */
+    bottom: 0.14em;
+    right: 0.12em;
+    border-left: 0.25em transparent;
+    border-right: 0.25em solid transparent;
+    border-bottom: 0.25em solid var(--icon-color);
+    ;
+}
+
+
+/* Animations keyframes: */
+
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}

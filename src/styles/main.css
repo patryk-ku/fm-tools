@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica&display=swap');
+@import url('./icons.css');
+@import url('./theme.css');
+/* Styles shared across all pages pages */
+
+body {
+    font-family: 'Geologica', sans-serif;
+    font-size: 16px;
+    background-color: var(--color-background);
+    color: var(--color-font);
+    /* check #container comment */
+    /* margin: 0; */
+}
+
+#container {
+    /* fix this cuz this breaks menu on the wall idk why */
+    /* width: 100%;
+    min-height: 100vh;
+    margin: 0; */
+}
+
+/* site logo */
+.fm-tools-logo {
+    background-color: rgba(0, 0, 0, 0.500);
+    color: var(--color-font);
+    font-size: 1.4em;
+    border-radius: 0.3em;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.fm-tools-logo a {
+    display: block;
+    padding: 0.2em 0.35em;
+    color: var(--color-font);
+    text-decoration: none;
+}
+
+.fm-tools-logo .red {
+    color: var(--color-fm-red);
+}
+
+/* nav bar like top menu styles */
+#menu {
+    font-size: 22px;
+    display: flex;
+    gap: 20px;
+    padding: 6px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#menu div {
+    align-self: center;
+}
+
+.nickname-container {
+    flex-basis: 100%;
+}
+
+.nickname-container input {
+    border-bottom: 2px solid var(--color-secondary);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding-bottom: 6px;
+    font-size: 24px;
+    color: var(--color-font);
+    background-color: inherit;
+    text-align: center;
+    width: 96%;
+    text-shadow: black 0 0 0.1em;
+    font-weight: bold;
+}
+
+.nickname-container input::placeholder {
+    color: var(--color-font);
+    opacity: 0.8;
+}
+
+.nickname-container input:focus-visible {
+    outline: none;
+}
+
+.icon-container {
+    font-size: 30px;
+    position: relative;
+    --icon-bg-color: var(--color-background);
+    --icon-color: var(--color-secondary);
+}
+
+/* Settings button and container */
+#settings-popup-closer {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /* background-color: black; */
+    /* opacity: 0.3; */
+}
+
+.icon-settings.active {
+    --icon-color: white;
+}
+
+#settings-container {
+    display: none;
+    position: absolute;
+    min-width: 195px;
+    width: 65vw;
+    max-width: 440px;
+    top: -12px;
+    right: -12px;
+    /* border: 2px solid var(--color-secondary); */
+    border-radius: 15px;
+    padding-top: 0.2em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    /* padding-bottom: 0.8em; */
+    user-select: none;
+
+    background-color: black;
+    color: white;
+    --icon-bg-color: var(--color-background);
+    --icon-color: white;
+}
+
+#settings-container-title {
+    padding-top: 10px;
+}
+
+.settings-container-section {
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.settings-container-section.disabled::after {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    width: 100%;
+    height: 110%;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.settings-container-header {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+}
+
+.settings-container-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#settings-theme-list {
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.settings-theme-button {
+    position: relative;
+    box-sizing: border-box;
+    border: 0.1em solid white;
+    border-radius: 50%;
+    width: 1.2em;
+    height: 1.2em;
+    cursor: pointer;
+    text-align: center;
+    line-height: 0.85em;
+    user-select: none;
+}
+
+.settings-icon-background2.active .settings-theme-button {
+    border-color: var(--color-secondary);
+}
+
+.settings-icon-background2 {
+    position: relative;
+}
+
+.settings-icon-background2.active::before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: -0.2em;
+    left: -0.2em;
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 0.25em;
+    background-color: var(--icon-bg-color);
+}
+
+/* Higlight active settings icon */
+.settings-icon-background {
+    position: relative;
+    display: block;
+    content: '';
+    box-sizing: border-box;
+}
+
+.settings-icon-background.active:before {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: -0.2em;
+    left: -0.2em;
+    width: 1.4em;
+    height: 1.4em;
+    border-radius: 0.25em;
+    background-color: var(--icon-bg-color);
+}
+
+.settings-icon-background.active>div {
+    --icon-color: var(--color-secondary);
+}
+
+/* custom theme bttons */
+.settings-custom-color {
+    box-sizing: border-box;
+    border: 0.1em solid white;
+    border-radius: 0.25em;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0.3em;
+    text-shadow: black 0 0 0.2em;
+}
+
+label[for="settings-custom-background"] {
+    background-color: var(--color-background);
+}
+
+label[for="settings-custom-text"] {
+    background-color: var(--color-secondary);
+}
+
+.settings-custom-color input {
+    position: absolute;
+    opacity: 0;
+}
+
+
+/* Loading and error overlay */
+#output-loading-overlay {
+    --icon-color: var(--color-secondary);
+    --icon-bg-color: var(--color-background);
+    font-size: 100px;
+    margin-top: 30vh;
+    display: none;
+}
+
+#output-error-overlay {
+    font-size: 30px;
+    margin-top: 20vh;
+    text-shadow: black 0 0 0.05em;
+    display: none;
+    text-align: center;
+}
+
+/* Responsive for PC */
+@media screen and (min-width: 840px) {
+    /* site logo */
+    .fm-tools-logo {
+        flex-basis: content;
+        padding-top: unset;
+        margin: -0.3em;
+    }
+
+    /* nav bar like top menu styles */
+    #menu {
+        font-size: 18px;
+        gap: 30px;
+        padding: 20px;
+        flex-wrap: nowrap;
+    }
+
+    .nickname-container {
+        flex-basis: content;
+    }
+
+    .nickname-container input {
+        padding-bottom: 2px;
+        font-size: 18px;
+        width: 180px;
+    }
+
+    /* Settings button and container */
+    #settings-container {
+        position: absolute;
+        width: 195px;
+        padding-top: 0.5em;
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+        /* padding-bottom: 0.8em; */
+    }
+}

@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica&display=swap');
+@import url('./main.css');
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+/* Output image div */
+
+#output {
+    margin-top: 1em;
+    padding: 2em;
+    background-color: var(--color-background);
+    display: none;
+}
+
+#output.square {
+    /* square download */
+    aspect-ratio: 1 / 1;
+    width: 100vw;
+    height: 100vw;
+    box-sizing: border-box;
+    line-height: 3.6vw;
+    padding: 1.5em;
+}
+
+#output.square #artists {
+    margin-bottom: 1em;
+}
+
+#output.square .artist-name {
+    font-size: 3.2vw;
+    margin-right: 0.35em;
+}
+
+#output.square #info {
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+}
+
+#output.thin {
+    /* 1 : 2 download */
+}
+
+#output.wide {
+    /* 2 : 1 download */
+    aspect-ratio: 2 / 0.8;
+    width: 100vw;
+    box-sizing: border-box;
+    line-height: 2.5vw;
+    padding: 1.5em;
+}
+
+#output.wide #artists {
+    margin-bottom: 1em;
+}
+
+#output.wide .artist-name {
+    font-size: 2.2vw;
+    margin-right: 0.25em;
+}
+
+#output.wide #info {
+    font-size: 1.3vw;
+    line-height: 1.3vw;
+}
+
+#artists {
+    margin-bottom: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+#artists.divider-none .artist-name::after {
+    content: '';
+}
+
+#artists.divider-comma .artist-name::after {
+    content: ',';
+}
+
+#artists.divider-comma .artist-name:last-child::after {
+    content: '';
+}
+
+#artists.divider-color .artist-name:nth-of-type(even) {
+    /* color: white; */
+    color: rgba(255, 255, 255, 0.842);
+}
+
+.artist-name {
+    font-size: 5vmin;
+    color: var(--color-secondary);
+    margin-right: 10px;
+    font-weight: bold;
+    /* white-space: nowrap; */
+    white-space: break-spaces;
+    display: inline-block;
+}
+
+.artist-name:last-child::after {
+    content: '';
+}
+
+#info {
+    font-size: 2.5vmin;
+}
+
+/* Responsive for PC: */
+
+@media screen and (min-width: 840px) {
+    #download-button {
+        margin-left: auto;
+    }
+
+    #output {
+        margin-top: 0;
+        padding: 4em;
+        background-color: var(--color-background);
+    }
+
+    #output.square {
+        aspect-ratio: 1 / 1;
+        width: 78vmin;
+        height: unset;
+        box-sizing: unset;
+        line-height: unset;
+        padding: 4em;
+    }
+
+    #output.square #artists {
+        margin-bottom: 2em;
+    }
+
+    #output.square .artist-name {
+        font-size: 3.5vmin;
+        margin-right: 10px;
+    }
+
+    #output.square #info {
+        font-size: 1.75vmin;
+        line-height: unset;
+    }
+
+    #output.thin {
+        aspect-ratio: 1 / 2;
+        width: 50vmin;
+    }
+
+    #output.wide {
+        aspect-ratio: 2 / 0.5;
+        box-sizing: unset;
+        line-height: unset;
+        width: 100vw;
+        padding: 4em;
+    }
+
+    #output.wide #artists {
+        margin-bottom: 2em;
+    }
+
+    #output.wide .artist-name {
+        font-size: 3.5vmin;
+        margin-right: 10px;
+    }
+
+    #output.wide #info {
+        font-size: 1.75vmin;
+        line-height: unset;
+    }
+
+    #artists {
+        margin-bottom: 2em;
+    }
+
+    .artist-name {
+        font-size: 3.5vmin;
+        color: var(--color-secondary);
+        margin-right: 10px;
+        /* dodaj własne ustawienie odsępu */
+        /* margin-right: 0.5em;  */
+        font-weight: bold;
+        /* white-space: nowrap; */
+        display: inline-block;
+    }
+
+    #info {
+        font-size: 1.75vmin;
+    }
+}
+
+
+/* tmp */
+
+#icon-testing {
+    --icon-color: var(--color-secondary);
+    --icon-bg-color: var(--color-background);
+    font-size: 300px;
+}
+
+#icon-testing>div {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,127 @@
+@import url('./main.css');
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+/* output styles */
+
+#output {
+    background-color: var(--color-background);
+    display: none;
+    flex-basis: 100%;
+    max-width: 700px;
+}
+
+#output #info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1.4em;
+    margin-bottom: 1.5em;
+}
+
+#info .title {
+    font-size: 1.4em;
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+    color: var(--color-secondary);
+    font-weight: bold;
+    margin-top: 2em;
+}
+
+#nicknameLeft,
+#nicknameRight {
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+#output .bar {
+    width: 100%;
+    display: flex;
+    gap: 2.5em;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+#artists .top-bar {
+    margin-bottom: 0.3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#artists .artist-name {
+    font-size: 1.2em;
+}
+
+#artists .position {
+    font-size: 0.6em;
+    margin-bottom: -0.3em;
+}
+
+#output .bar .right,
+#output .bar .left {
+    content: 'test';
+    background-color: var(--color-secondary);
+    /* padding: 1em; */
+    padding: 0.12em 0.3em;
+    font-size: 1.2em;
+    color: var(--color-background);
+    font-weight: bold;
+
+}
+
+.bar .left {
+    min-width: 2.5em;
+    text-align: right;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+.bar .right {
+    min-width: 2.5em;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+}
+
+/* Responsive for PC */
+@media screen and (min-width: 840px) {
+    #download-button {
+        margin-left: auto;
+    }
+
+    main {
+        padding: 2em;
+    }
+
+    #output {
+        padding: 4em;
+    }
+
+    #output #info {
+        font-size: 1.6em;
+        margin-bottom: 1em;
+    }
+
+    #info .title {
+        font-size: 2em;
+        margin-bottom: 1.5em;
+        margin-top: 0;
+    }
+
+    #artists .artist-name {
+        font-size: 1.5em;
+    }
+
+    #artists .position {
+        font-size: 0.8em;
+    }
+    
+    #output .bar {
+        margin-bottom: 2.2em;
+        gap: 4.5em;
+    }
+}

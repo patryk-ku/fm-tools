@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check friend</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="styles/check-friend.css">
+    <script src="./scripts/checkFriend.js" type="module" defer></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="menu">
+                <div class="fm-tools-logo"><a href="/">
+                        <span class="red">.fm </span>TOOLS</a>
+                </div>
+                <div class="nickname-container">
+                    <input onClick="this.select();" type="text" id="nickname" placeholder="last.fm nickname"
+                        title="Nickname" autofocus>
+                </div>
+                <div class="nickname-container">
+                    <input onClick="this.select();" type="text" id="nickname-friend" placeholder="friend nickname"
+                        title="Friend nickname" autofocus>
+                </div>
+                <div id="create-button" class="icon-container" title="Generate">
+                    <div class="icon-start"></div>
+                </div>
+                <div id="download-button" class="icon-container" title="Download">
+                    <div class="icon-download"></div>
+                </div>
+                <div id="color-button" class="icon-container" title="Random color">
+                    <div class="icon-color"></div>
+                </div>
+                <div id="settings-popup-closer"></div>
+                <div id="settings-button" class="icon-container">
+                    <div id="settings-container">
+                        <div class="settings-container-section">
+                            <div class="settings-container-header">theme</div>
+                            <div id="settings-theme-list" class="settings-container-content">
+                            </div>
+                        </div>
+                        <div class="settings-container-section">
+                            <div class="settings-container-header">custom theme</div>
+                            <div class="settings-container-content">
+                                <label for="settings-custom-text" class="settings-custom-color"
+                                    title="Custom text color">
+                                    <span>text</span>
+                                    <input type="color" name="settings-custom-text" id="settings-custom-text">
+                                </label>
+                                <label for="settings-custom-background" class="settings-custom-color"
+                                    title="Custom background color">
+                                    <span>background</span>
+                                    <input type="color" name="settings-custom-background"
+                                        id="settings-custom-background">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="settings-icon" class="icon-settings" title="Settings"></div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="output">
+                <div id="info">
+                    <div class="title">Shared top artists between</div>
+                    <div id="nicknameLeft"></div>
+                    <div id="nicknameRight"></div>
+                </div>
+                <div id="artists">
+                    <!-- <div>
+                        <div class="top-bar">
+                            <div class="position">top #3</div>
+                            <div class="artist-name">Artist</div>
+                            <div class="position">top #1</div>
+                        </div>
+                        <div class="bar">
+                            <div class="left">999</div>
+                            <div class="right">999</div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div id="output-loading-overlay">
+                <div class="icon-loading"></div>
+            </div>
+            <div id="output-error-overlay">
+                <span id="output-error-overlay-text">Error</span>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
