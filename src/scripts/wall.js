@@ -1,5 +1,5 @@
 import { colorSets } from './colorSets.js';
-import 'html2canvas';
+import * as html2canvas from 'html2canvas';
 
 const theWall = {
     nickname: document.querySelector('#nickname'),
