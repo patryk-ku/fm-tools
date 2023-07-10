@@ -1,6 +1,8 @@
 # .fm TOOLS
 My collection of tools for playing with last.fm data.
 
+[Live Demo](https://fmtools.ct8.pl/)
+
 Written in JavaScript and Node.js. It is not finished yet, expect bugs. In the future I plan to add more tools and make this a whole set of different utilities to play with last.fm data.
 
 ## Install and usage
